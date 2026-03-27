@@ -6,11 +6,15 @@ on:
       - main
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-22.04
+    environment: Build
+    env:
+      NODE_ENV: development
+      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v3
         with:
           version: '10'

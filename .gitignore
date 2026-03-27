@@ -25,3 +25,5 @@ logs
 
 #act bin
 bin
+
+local.db*
