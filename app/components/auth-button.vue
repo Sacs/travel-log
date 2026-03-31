@@ -1,0 +1,17 @@
+<script setup lang="ts">
+import { useAuthStore } from './app/stores/auth';
+
+const authStore = useAuthStore();
+</script>
+
+<template>
+  <button class="btn btn-accent" @click="authStore.signIn">
+    Sign In with Github
+    <span v-if="authStore.loading" class="loading loading-spinner loading-md" />
+    <Icon
+      v-else
+      name="tabler:brand-github"
+      size="24"
+    />
+  </button>
+</template>
