@@ -27,3 +27,5 @@ logs
 bin
 
 local.db*
+
+.playwright-mcp

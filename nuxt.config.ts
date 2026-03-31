@@ -6,7 +6,12 @@ import './app/lib/env';
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/icon',
+    '@nuxtjs/color-mode',
+    '@pinia/nuxt',
+  ],
   css: ['~/assets/css/main.css'],
   eslint: {
     config: {
@@ -18,5 +23,11 @@ export default defineNuxtConfig({
   },
   colorMode: {
     dataValue: 'theme',
+  },
+  nitro: {
+    inlineDynamicImports: true,
+    externals: {
+      inline: ['vue', '@vue/runtime-core', '@vue/runtime-dom', '@vue/reactivity'],
+    },
   },
 });
