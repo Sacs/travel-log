@@ -7,7 +7,7 @@ export const locationLogImage = sqliteTable('locationLogImage', {
   id: int().primaryKey({ autoIncrement: true }),
   key: text().notNull(),
   locationLogId: int().notNull().references(() => locationLog.id),
-  userId: int().notNull().references(() => user.id),
+  userId: text().notNull().references(() => user.id),
   createdAt: int().notNull().$default(() => Date.now()),
   updatedAt: int().notNull().$default(() => Date.now()).$onUpdate(() => Date.now()),
 });
