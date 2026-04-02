@@ -6,6 +6,7 @@
     "build": "nuxt build",
     "dev": "concurrently \"pnpm run dev:db\" \"nuxt dev\"",
     "dev:db": "turso dev --db-file local.db",
+    "db:migrate": "drizzle-kit migrate",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
