@@ -24,4 +24,7 @@ export default defineNuxtConfig({
   colorMode: {
     dataValue: 'theme',
   },
+  nitro: {
+    inlineDynamicImports: true,
+  },
 });
