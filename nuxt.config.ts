@@ -26,8 +26,5 @@ export default defineNuxtConfig({
   },
   nitro: {
     inlineDynamicImports: true,
-    externals: {
-      inline: ['vue', '@vue/runtime-core', '@vue/runtime-dom', '@vue/reactivity'],
-    },
   },
 });
