@@ -25,6 +25,10 @@ export default defineNuxtConfig({
     dataValue: 'theme',
   },
   nitro: {
-    inlineDynamicImports: true,
+    rollupConfig: {
+      output: {
+        interop: 'compat',
+      },
+    },
   },
 });
