@@ -20,6 +20,12 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        'better-auth/client',
+        'better-auth/vue',
+      ],
+    },
   },
   colorMode: {
     dataValue: 'theme',
